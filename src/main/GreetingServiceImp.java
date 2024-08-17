@@ -13,7 +13,7 @@ public class GreetingServiceImp extends GreetingServiceGrpc.GreetingServiceImplB
         System.out.println(request);
 
         GreetingServiceOuterClass.HelloResponse response = GreetingServiceOuterClass
-                .HelloResponse.newBuilder().setGreeting("Hello from server" + request.getName())
+                .HelloResponse.newBuilder().setGreeting("Hello from server " + request.getName())
                 .build();
 
         responseObserver.onNext(response);
